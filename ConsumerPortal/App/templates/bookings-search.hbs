@@ -1,0 +1,39 @@
+﻿<div class="row">
+	<div class="col-sm-6">
+		<section class="panel panel-default">
+		<header class="panel-heading font-bold">
+			<ul class="nav nav-pills pull-right wrapper-xs">
+				<li><button type="button" {{bind-attr class=":btn :btn-sm :btn-success :btn-rounded view.isDisabled:disabled"}} {{action "searchBooking" target="view"}}>Search</button></li>
+            </ul>
+			Search Booking result
+		</header>
+		<div class="panel-body">
+			<form role="form">
+			<div class="form-group">
+				<label>Booking Number</label>
+				{{input type="text" value=view.bookingNumber id="bookingNumber" name="bookingNumber" class="form-control" placeholder="Booking Number"}}
+			</div>
+			<div class="line line-dashed b-b line-lg pull-in"></div>
+			<div class="form-group">
+				<label>Family Name</label>
+				{{input type="text" value=view.familyName id="familyName" name="familyName" class="form-control" data-trigger="change" data-required="true" placeholder="family name"}}
+			</div>
+			<div class="form-group">
+				<label>Given Name</label>
+				{{input type="text" value=view.givenName id="givenName" name="givenName" class="form-control" data-trigger="change" data-required="true" placeholder="given name"}}
+			</div>
+			<div class="form-group">
+				<label>Contact Phone</label>
+				{{input type="text" value=view.phone id="phone" name="phone" class="form-control" data-trigger="change" data-required="true"  data-type="phone" placeholder="phone"}}
+			</div>
+			<div class="form-group">
+				<label>Booking Date</label>
+				<div id="bookingCalendar"></div>
+			</div>
+			</form>
+		</div>
+		</section>
+	</div>
+	<div class="col-sm-6">
+	</div>
+</div>

@@ -1,0 +1,22 @@
+﻿<section class="vbox">
+  {{view App.HeaderView tagName="header" class="bg-white-only header header-md navbar navbar-fixed-top-xs"}}
+
+
+  <section>
+    <section class="hbox stretch">
+
+      {{view App.SiderbarView tagName="aside" class="bg-black dk aside-md hidden-print" id="nav"}}
+
+      <!-- .body -->
+      <section id="content">
+        <section class="vbox">
+          <section class="scrollable wrapper">
+            {{outlet}}
+          </section>
+        </section>
+        <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+      </section>
+      <!-- /.body -->
+    </section>
+  </section>
+</section>

@@ -1,0 +1,33 @@
+﻿
+<!--Logo Area-->
+<div class="navbar-header aside-md bg-info dk">
+  <!--Collect Button for sider bar Visible For Mobile-->
+  <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+    <i class="icon-list"></i>
+  </a>
+  <a href="/Home/Index" class="navbar-brand text-lt">
+    <i class="fa fa-at"></i>
+    <img src="/Content/images/logo.png" alt="." class="hide"/>
+    <span class="hidden-nav-xs m-l-sm">Company Name</span>
+  </a>
+  <!--Collect Button for user info; Visible For Mobile-->
+  <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+    <i class="icon-settings"></i>
+  </a>
+</div>
+
+<!--Collect Button for sider bar; Unvisible For Mobile-->
+<ul class="nav navbar-nav hidden-xs">
+  <li>
+    <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
+      <i class="fa fa-indent text"></i>
+      <i class="fa fa-dedent text-active"></i>
+    </a>
+  </li>
+</ul>
+
+{{#if view.isAdmin}}
+{{partial "headerForAdmin"}}
+{{else}}
+{{partial "headerForConsumer"}}
+{{/if}}

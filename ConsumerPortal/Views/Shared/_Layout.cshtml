@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - HTR Telhealth Consumer Portal</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    @Styles.Render("~/Content/styles")
+    @Scripts.Render("~/bundles/modernizr")
+@*    @Styles.Render("~/Content/themes/base/css")*@
+</head>
+<body class="bg-info dker">
+
+    <div id="body">
+        @RenderBody()
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="text-center padder">
+            <p>
+                <small>Web app framework base on Bootstrap<br>
+                    &copy; 2014</small>
+            </p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/plugins")
+    @Scripts.Render("~/bundles/ajaxlogin")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

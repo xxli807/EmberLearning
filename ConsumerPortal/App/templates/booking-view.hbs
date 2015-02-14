@@ -1,0 +1,47 @@
+﻿<div class="row">
+  <div class="col-sm-6">
+    <section class="panel panel-default">
+      <header class="panel-heading font-bold">
+        Booking Summary
+      </header>
+      <div class="panel-body">
+        <p>
+          {{view.consumerName}} have a visit. @:{{view.bookingDateTime}}
+        </p>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <h3>Booking Number</h3>
+        <p>
+          #: {{view.bookingNumber}}&nbsp;
+          {{#if view.isOverdue}}
+          <span class="label bg-dark">Overdue</span>
+          {{else}}
+
+          {{#if view.isApplied}}
+          <span class="label bg-info">Approving...</span>
+          {{/if}}
+          {{#if view.isScheduled}}
+          <span class="label bg-success">Scheduled</span>
+          {{/if}}
+          {{#if view.isCanceled}}
+          <span class="label bg-danger">Canceled</span>
+          {{/if}}
+          {{#if view.isRejected}}
+          <span class="label bg-danger">Rejected</span>
+          {{/if}}
+
+          {{/if}}
+
+        </p>
+        <div id="qrcode"></div>
+        <h3>Contact</h3>
+        <p>
+          Phone:{{view.contactPhone}}&nbsp;<br/>
+          Email:{{view.contactEmail}}&nbsp;<br/>
+        </p>
+
+      </div>
+    </section>
+  </div>
+  <div class="col-sm-6">
+  </div>
+</div>

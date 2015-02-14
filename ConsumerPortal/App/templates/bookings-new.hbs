@@ -1,0 +1,103 @@
+﻿<div class="m-b-md">
+  <h3 class="m-b-none">Booking wizard</h3>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <form id="wizardform" method="get" action="index.html">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <ul class="nav nav-tabs font-bold">
+            <li>
+              <a href="#step1" data-toggle="tab">1 Basic</a>
+            </li>
+            <li>
+              <a href="#step2" data-toggle="tab">2 Time</a>
+            </li>
+            <li>
+              <a href="#step3" data-toggle="tab">3 Finalise</a>
+            </li>
+          </ul>
+        </div>
+        <div class="panel-body">
+          <div class="progress progress-xs m-t-md">
+            <div class="progress-bar bg-success"></div>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane" id="step1">
+              <p>Family Name:</p>
+              {{input type="text" value=view.familyName id="familyName" name="familyName" class="form-control" data-trigger="change" data-required="true" placeholder="family name"}}
+              <p class="m-t">Given Name:</p>
+              {{input type="text" value=view.givenName id="givenName" name="givenName" class="form-control" data-trigger="change" data-required="true" placeholder="given name"}}
+              <p class="m-t">Phone #:</p>
+              {{input type="text" value=view.contactPhone id="contactPhone" name="contactPhone" class="form-control" data-trigger="change" data-required="true" data-type="phone" placeholder="phone number"}}
+              <p class="m-t">Email:</p>
+              {{input type="text" value=view.contactEmail id="contactEmail" name="contactEmail" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address"}}
+              <p class="m-t">Reason:</p>
+              {{textarea value=view.visitReason id="visitReason" name="visitReason" class="form-control" data-trigger="change" data-required="true"}}
+            </div>
+            <div class="tab-pane" id="step2">
+              <p>Provider:</p>
+              {{view Em.Select value=view.providerId content=view.providers optionLabelPath="content.fullName" optionValuePath="content.id"
+              class="form-control" id="doctorName" name="doctorName" data-trigger="change" data-required="true"
+              }}
+              <p>Date:</p>
+              <div id="bookingCalendar"></div>
+              <br/>
+              {{#if view.isWorkingDay}}
+              <div id="dateDetail" class="row">
+                <div class="col-lg-12">
+                  <label class="checkbox-inline">
+                    {{input type="checkbox" id="atAM" name="atAM" checked=view.atAM}} A.M.
+                  </label>
+                  <label class="checkbox-inline">
+                    {{input type="checkbox" id="atPM" name="atPM" checked=view.atPM}} P.M.
+                  </label>
+                </div>
+              </div>
+              {{/if}}
+              <br/>
+            </div>
+            <div class="tab-pane" id="step3">
+              <p>
+                You have a visit with <cite title="">{{view.providerName}}&nbsp;</cite>.
+              </p>
+              
+              <h3>Date</h3>
+              <p>{{view.bookingDateTime}}&nbsp;</p>
+              
+              <h3>Contact Information</h3>
+              <p>
+                Family Name:{{view.familyName}}&nbsp;<br/>
+                Given Name:{{view.givenName}}&nbsp;<br/>
+                Phone:{{view.contactPhone}}&nbsp;<br/>
+                Email:{{view.contactEmail}}&nbsp;<br/>
+              </p>
+              
+              <h3>Visit Reason</h3>
+              <p>
+                {{view.visitReason}}
+              </p>
+            </div>
+            <ul class="pager wizard m-b-sm">
+              <li class="previous first" style="display:none;">
+                <span href="#">First</span>
+              </li>
+              <li class="previous">
+                <span href="#">Previous</span>
+              </li>
+              <li class="next last" style="display:none;">
+                <span href="#">Last</span>
+              </li>
+              <li class="next">
+                <span href="#">Next</span>
+              </li>
+              <li class="submit pull-right" style="display:none;">
+                <span {{action "addBooking" target="view"}}>Submit</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+﻿<section class="vbox">
+  <section class="w-f-md scrollable">
+    <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+
+      {{#if view.isAdmin}}
+      {{partial "siderbarForAdmin"}}
+      {{else}}
+      {{partial "siderbarForConsumer"}}
+      {{/if}}
+
+    </div>
+  </section>
+
+  <footer class="footer hidden-xs no-padder text-center-nav-xs">
+    <div class="bg hidden-xs ">
+    </div>
+  </footer>
+</section>

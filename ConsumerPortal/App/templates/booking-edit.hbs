@@ -1,0 +1,78 @@
+﻿<div class="row">
+  <div class="col-sm-6">
+    <section class="panel panel-default">
+      <header class="panel-heading font-bold">
+        Edit Booking
+      </header>
+      <div class="panel-body">
+        <form id="wizardform" method="get" action="index.html">
+          <p>
+            Consumer have a visit with <cite title="">{{view.providerName}}&nbsp;</cite>.
+          </p>
+
+          <p>
+            Date: {{view.bookingDateTime}}&nbsp;<br/>
+            Family Name:{{view.familyName}}&nbsp;<br/>
+            Given Name:{{view.givenName}}&nbsp;<br/>
+            Phone:{{view.contactPhone}}&nbsp;<br/>
+            Email:{{view.contactEmail}}&nbsp;<br/>
+            Visit Reason: <br/>
+            {{view.visitReason}}
+          </p>
+
+          <h3>Status:</h3>
+          <div class="radio-inline">
+            <label><input type="radio" name="status" id="applied" value="Applied" {{bind-attr checked=view.isApplied}}/> Applied</label>
+          </div>
+          <div class="radio-inline">
+            <label><input type="radio" name="status" id="scheduled" value="Scheduled" {{bind-attr checked=view.isScheduled}}/> Scheduled</label>
+          </div>
+          <div class="radio-inline">
+            <label><input type="radio" name="status" id="rejected" value="Rejected" {{bind-attr checked=view.isRejected}}/> Rejected</label>
+          </div>
+          <div class="radio-inline">
+            <label><input type="radio" name="status" id="canceled" value="Canceled" {{bind-attr checked=view.isCanceled}}/> Canceled</label>
+          </div>
+          <br/>
+      
+          <h3>Provider:</h3>
+          {{view Em.Select content=view.providers optionLabelPath="content.fullName" optionValuePath="content.id" selection=view.provider
+          class="form-control" id="doctorName" name="doctorName" data-trigger="change" data-required="true"
+          }}
+          <h3>Date:</h3>
+          <div id="bookingCalendar"></div>
+          <br/>
+          {{#if view.isWorkingDay}}
+          <div id="dateDetail" class="row">
+            {{#if view.isScheduled}}
+            <div class="col-sm-6">
+              <p>Start Time:</p>
+              {{input type="text" value=view.startTime id="startTime" name="startTime" class="form-control" data-trigger="change" data-required="true" placeholder="hh:mm"}}
+            </div>
+            <div class="col-sm-6">
+              <p>End Time:</p>
+              {{input type="text" value=view.endTime id="endTime" name="endTime" class="form-control" data-trigger="change" data-required="true" placeholder="hh:mm"}}
+            </div>
+            {{else}}
+            <div class="col-lg-12">
+              <label class="checkbox-inline">
+                {{input type="checkbox" id="atAM" name="atAM" checked=view.atAM}} A.M.
+              </label>
+              <label class="checkbox-inline">
+                {{input type="checkbox" id="atPM" name="atPM" checked=view.atPM}} P.M.
+              </label>
+            </div>
+            {{/if}}
+          </div>
+          {{/if}}
+          <br/>
+
+          <button type="button" class="btn btn-sm btn-default" {{action "saveBooking" target="view"}}>Save</button>
+          <button type="button" class="btn btn-sm btn-default" {{action "gotoListView" target="view"}}>Back</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="col-sm-6">
+  </div>
+</div>

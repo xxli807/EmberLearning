@@ -1,0 +1,133 @@
+﻿<style>
+  #bookingCalendar .datepicker {
+    width:100%;
+  }
+  #bookingCalendar .datepicker .table-condensed {
+    width:100%;
+  }
+  #bookingCalendar .datepicker-days tbody td{
+    height:40px;
+  }
+  
+  #bookingCalendar .datepicker-days tbody .workingDay.active {
+    background-image: none !important;
+    color: #ffffff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+  }
+  #bookingCalendar .datepicker-days tbody .workingDay.disabled {
+    background: #DFDFDF !important;
+    background-image: none !important;
+    color: #999999;
+    cursor: default;
+  }
+  #bookingCalendar .datepicker-days tbody .workingDay, #bookingCalendar .datepicker-days tbody .workingDay.am.pm {
+    background: #a8ffa8;
+  }
+  #bookingCalendar .datepicker-days tbody .workingDay.pm {
+
+    background-image: -ms-linear-gradient(top, #fff, #a8ffa8);
+    background-image: -moz-linear-gradient(top, #fff, #a8ffa8);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#a8ffa8));
+    background-image: -webkit-linear-gradient(top, #fff, #a8ffa8);
+    background-image: -o-linear-gradient(top, #fff, #a8ffa8);
+    background-image: linear-gradient(top, #fff, #a8ffa8);
+  }
+  #bookingCalendar .datepicker-days tbody .workingDay.am {
+
+    background-image: -ms-linear-gradient(bottom, #fff, #a8ffa8);
+    background-image: -moz-linear-gradient(bottom, #fff, #a8ffa8);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#a8ffa8));
+    background-image: -webkit-linear-gradient(bottom, #fff, #a8ffa8);
+    background-image: -o-linear-gradient(bottom, #fff, #a8ffa8);
+    background-image: linear-gradient(bottom, #fff, #a8ffa8);
+  }
+</style>
+
+<div class="m-b-md">
+  <h3 class="m-b-none">Booking wizard</h3>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <form id="wizardform" method="get" action="index.html">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <ul class="nav nav-tabs font-bold">
+            <li>
+              <a href="#step1" data-toggle="tab">1 Basic</a>
+            </li>
+            <li>
+              <a href="#step2" data-toggle="tab">2 Time</a>
+            </li>
+            <li>
+              <a href="#step3" data-toggle="tab">3 Finalise</a>
+            </li>
+          </ul>
+        </div>
+        <div class="panel-body">
+          <div class="progress progress-xs m-t-md">
+            <div class="progress-bar bg-success"></div>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane" id="step1">
+              <p>Family Name:</p>
+              <input type="text" id="familyName" name="familyName" class="form-control" data-trigger="change" data-required="true" placeholder="family name"/>
+              <p class="m-t">Given Name:</p>
+              <input type="text" id="givenName" name="givenName" class="form-control" data-trigger="change" data-required="true" placeholder="given name"/>
+              <p class="m-t">Phone #:</p>
+              <input type="text" id="contactPhone" name="contactPhone" class="form-control" data-trigger="change" data-required="true" data-type="phone" placeholder="phone number"/>
+              <p class="m-t">Email:</p>
+              <input type="text" id="contactEmail" name="contactEmail" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address"/>
+              <p class="m-t">Reason:</p>
+              <textarea id="visitReason" name="visitReason" class="form-control" data-trigger="change" data-required="true"></textarea>
+            </div>
+            <div class="tab-pane" id="step2">
+              <p>Provider:</p>
+              <select class="form-control" data-trigger="change" data-required="true">
+                <option>Gao Wei</option>
+              </select>
+              <p>Date:</p>
+              <div id="bookingCalendar"></div>
+              <div id="dateDetail"></div>
+            </div>
+            <div class="tab-pane" id="step3">
+              <p>
+                You have a visit with <cite id="doctorName" title="">Gao Wei</cite>.
+              </p>
+              <dl class="dl-horizontal">
+                <dt>Date</dt>
+                <dd>01/12/2014</dd>
+                <dt>Your family name</dt>
+                <dd>Zhu</dd>
+                <dt>Your given name</dt>
+                <dd>Yu</dd>
+                <dt>Contact Phone</dt>
+                <dd>123 456 7890</dd>
+                <dt>Contact Email</dt>
+                <dd>aaaa@aaaa.aaa</dd>
+              </dl>
+
+            </div>
+            <ul class="pager wizard m-b-sm">
+              <li class="previous first" style="display:none;">
+                <span href="#">First</span>
+              </li>
+              <li class="previous">
+                <span href="#">Previous</span>
+              </li>
+              <li class="next last" style="display:none;">
+                <span href="#">Last</span>
+              </li>
+              <li class="next">
+                <span href="#">Next</span>
+              </li>
+              <li class="submit pull-right" style="display:none;">
+                <span href="#">Submit</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

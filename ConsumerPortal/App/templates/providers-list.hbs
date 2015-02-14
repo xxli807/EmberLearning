@@ -1,0 +1,36 @@
+﻿<section class="panel panel-default">
+  <header class="panel-heading">
+    Providers
+    <i class="fa fa-info-sign text-muted" data-toggle="tooltip" data-placement="bottom" data-title="ajax to load the data."></i>
+  </header>
+  <div class="table-responsive">
+    <table id="providersTable" class="table table-striped m-b-none" data-ride="datatables">
+      <thead>
+        <tr>
+          <th class="hide">id</th>
+          <th>Provider Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Mobile</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each provider in this}}
+        <tr {{action "gotoEditView" provider target="view"}}>
+          <td class="hide">{{provider.id}}</td>
+          <td>{{provider.fullName}}</td>
+          <td>{{provider.email}}</td>
+          <td>{{provider.phone}}</td>
+          <td>{{provider.mobile}}</td>
+          <td>
+            {{#link-to 'provider.edit' provider class="auto"}}
+            <i class="fa fa-angle-right text-xs"></i>
+            {{/link-to}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>

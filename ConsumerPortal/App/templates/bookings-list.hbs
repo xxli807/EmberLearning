@@ -1,0 +1,42 @@
+﻿<section class="panel panel-default">
+  <header class="panel-heading">
+    Providers
+    <i class="fa fa-info-sign text-muted" data-toggle="tooltip" data-placement="bottom" data-title="ajax to load the data."></i>
+  </header>
+  <div class="table-responsive">
+    <table id="bookingsTable" class="table table-striped m-b-none" data-ride="datatables">
+      <thead>
+        <tr>
+          <th class="hide">id</th>
+          <th>Consumer Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Mobile</th>
+          <th>Provider Name</th>
+          <th>Booking Date</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each booking in this}}
+        <tr {{action "gotoEditView" booking target="view"}}>
+          <td class="hide">{{booking.id}}</td>
+          <td>{{booking.fullName}}</td>
+          <td>{{booking.email}}</td>
+          <td>{{booking.phone}}</td>
+          <td>{{booking.mobile}}</td>
+          <td>{{booking.providerName}}</td>
+          <td>{{booking.bookingDateTime}}</td>
+          <td>{{booking.status}}</td>
+          <td>
+            {{#link-to 'booking.edit' provider class="auto"}}
+            <i class="fa fa-angle-right text-xs"></i>
+            {{/link-to}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>

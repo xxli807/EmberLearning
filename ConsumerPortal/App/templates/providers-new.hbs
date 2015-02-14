@@ -1,0 +1,271 @@
+﻿<section class="panel panel-default">
+  <header class="panel-heading bg-light">
+    <ul class="nav nav-tabs pull-right">
+      <li class="active">
+        <a href="#providerProfile" data-toggle="tab">
+          <i class="fa fa-user-md text-muted"></i> Profile
+        </a>
+      </li>
+      <li>
+        <a href="#providerSettings" data-toggle="tab">
+          <i class="fa fa-cog text-muted"></i> Settings
+        </a>
+      </li>
+    </ul>
+    <span class="hidden-sm">Provider Details</span>
+  </header>
+  <div class="panel-body">
+    <div class="tab-content">
+      <div class="tab-pane active" id="providerProfile">
+        <form class="bs-example form-horizontal">
+          <div class="form-group">
+            <label class="col-lg-2 control-label">Provider Name</label>
+            <div class="col-lg-10">
+              <div class="row">
+                <div class="col-lg-3 col-xs-6">
+                  {{input type="text" value=view.familyName id="familyName" name="familyName" class="form-control" data-trigger="change" data-required="true" placeholder="family name"}}
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                  {{input type="text" value=view.givenName id="givenName" name="givenName" class="form-control" data-trigger="change" data-required="true" placeholder="given name"}}
+                </div>
+              </div>
+              <span class="help-block m-b-none"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+              <div class="row">
+                <div class="col-lg-6">
+                  {{input type="text" value=view.email id="email" name="email" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address"}}
+                </div>
+              </div>
+              <span class="help-block m-b-none"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label">Phone</label>
+            <div class="col-lg-10">
+              <div class="row">
+                <div class="col-lg-6">
+                  {{input type="text" value=view.phone id="phone" name="phone" class="form-control" data-trigger="change" data-required="true" data-type="phone" placeholder="phone number"}}
+                </div>
+              </div>
+              <span class="help-block m-b-none"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label">Mobile</label>
+            <div class="col-lg-10">
+              <div class="row">
+                <div class="col-lg-6">
+                  {{input type="text" value=view.mobile id="mobile" name="mobile" class="form-control" data-trigger="change" data-required="true" data-type="phone" placeholder="mobile phone number"}}
+                </div>
+              </div>
+              <span class="help-block m-b-none"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+              <button type="button" class="btn btn-sm btn-default btnNextStep">Next</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="tab-pane" id="providerSettings">
+        <div class="table-responsive">
+          <table class="table table-striped m-b-none form-horizontal">
+            <thead>
+              <tr>
+                <th>Day of week</th>
+                <th>A.M.</th>
+                <th>P.M.</th>
+                <th style="width:60px;">ALL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Sunday
+                  {{input type="hidden" value=view.sunday id="sunday" name="sunday"}}
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtAM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtPM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td class="text-success">
+                  <button type="button" class="btnAllDay btn btn-default btn-xs" data-toggle="class:btn-success" data-target="#">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Monday
+                  {{input type="hidden" value=view.monday id="monday" name="monday"}}
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtAM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtPM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td class="text-success">
+                  <button type="button" class="btnAllDay btn btn-default btn-xs" data-toggle="class:btn-success" data-target="#">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Tuesday
+                  {{input type="hidden" value=view.tuesday id="tuesday" name="tuesday"}}
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtAM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtPM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td class="text-success">
+                  <button type="button" class="btnAllDay btn btn-default btn-xs" data-toggle="class:btn-success" data-target="#">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Wednesday
+                  {{input type="hidden" value=view.wednesday id="wednesday" name="wednesday"}}
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtAM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtPM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td class="text-success">
+                  <button type="button" class="btnAllDay btn btn-default btn-xs" data-toggle="class:btn-success" data-target="#">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Thursday
+                  {{input type="hidden" value=view.thursday id="thursday" name="thursday"}}
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtAM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtPM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td class="text-success">
+                  <button type="button" class="btnAllDay btn btn-default btn-xs" data-toggle="class:btn-success" data-target="#">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Friday
+                  {{input type="hidden" value=view.friday id="friday" name="friday"}}
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtAM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtPM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td class="text-success">
+                  <button type="button" class="btnAllDay btn btn-default btn-xs" data-toggle="class:btn-success" data-target="#">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Saturday
+                  {{input type="hidden" value=view.saturday id="saturday" name="saturday"}}
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtAM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td>
+                  <button type="button" class="btnWorkingAtPM btn btn-xs btn-default" data-toggle="class:btn-success" data-target="#">
+                    <span class="text">No Working</span>
+                    <span class="text-active">Working</span>
+                  </button>
+                </td>
+                <td class="text-success">
+                  <button type="button" class="btnAllDay btn btn-default btn-xs" data-toggle="class:btn-success" data-target="#">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="panel-footer">
+    <div class="row">
+      <div class="col-lg-12 text-right">
+        <button type="button" class="btn btn-sm btn-default" id="btnSaveProvider"  {{action "addProvider" target="view"}}>Save</button>
+      </div>
+    </div>
+  </footer>
+</section>
+
+
