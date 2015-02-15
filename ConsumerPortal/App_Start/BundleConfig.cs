@@ -9,45 +9,45 @@ namespace ConsumerPortal
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                "~/Scripts/jquery-{version}.js",
-                "~/Scripts/jquery-ui-{version}.js",
-                "~/Scripts/jquery.ui.touch-punch.min.js"
+                "~/Scripts/ComLib/jquery-{version}.js",
+                "~/Scripts/ComLib/jquery-ui-{version}.js",
+                "~/Scripts/ComLib/jquery.ui.touch-punch.min.js"
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                "~/Scripts/jquery.unobtrusive*",
-                "~/Scripts/jquery.validate*"
+                "~/Scripts/ComLib/jquery.unobtrusive*",
+                "~/Scripts/ComLib/jquery.validate*"
             ));
             bundles.Add(new ScriptBundle("~/bundles/plugins").Include(
-                "~/Scripts/moment.min.js",
-                "~/Scripts/qrcode.min.js",
-                "~/Scripts/parsley/parsley.min.js",
-                "~/Scripts/parsley/parsley.extend.js",
-                "~/Scripts/bootstrap.js",
-                "~/Scripts/slimscroll/jquery.slimscroll.min.js",
+                "~/Scripts/ComLib/moment.min.js",
+                "~/Scripts/ComLib/qrcode.min.js",
+                "~/Scripts/ComLib/parsley/parsley.min.js",
+                "~/Scripts/ComLib/parsley/parsley.extend.js",
+                "~/Scripts/ComLib/bootstrap.js",
+                "~/Scripts/ComLib/slimscroll/jquery.slimscroll.min.js",
                 //"~/Scripts/datepicker/bootstrap-datepicker.js",
 
-                "~/Scripts/bootstrap-datepicker/bootstrap-datepicker.js",
-                "~/Scripts/bootstrap-datepicker/locales/bootstrap-datepicker.ar.js",
-                "~/Scripts/wizard/jquery.bootstrap.wizard.js",
-                "~/Scripts/fullcalendar/fullcalendar.min.js",
-                "~/Scripts/noty/packaged/jquery.noty.packaged.js",
+                "~/Scripts/ComLib/bootstrap-datepicker/bootstrap-datepicker.js",
+                "~/Scripts/ComLib/bootstrap-datepicker/locales/bootstrap-datepicker.ar.js",
+                "~/Scripts/ComLib/wizard/jquery.bootstrap.wizard.js",
+                "~/Scripts/ComLib/fullcalendar/fullcalendar.min.js",
+                "~/Scripts/ComLib/noty/packaged/jquery.noty.packaged.js",
 
                 // For Chart
-                "~/Scripts/charts/flot/jquery.flot.min.js",
-                "~/Scripts/charts/flot/jquery.flot.tooltip.min.js",
-                "~/Scripts/charts/flot/jquery.flot.resize.js",
-                "~/Scripts/charts/flot/jquery.flot.orderBars.js",
-                "~/Scripts/charts/flot/jquery.flot.pie.min.js",
-                "~/Scripts/charts/flot/jquery.flot.grow.js",
+                "~/Scripts/ComLib/charts/flot/jquery.flot.min.js",
+                "~/Scripts/ComLib/charts/flot/jquery.flot.tooltip.min.js",
+                "~/Scripts/ComLib/charts/flot/jquery.flot.resize.js",
+                "~/Scripts/ComLib/charts/flot/jquery.flot.orderBars.js",
+                "~/Scripts/ComLib/charts/flot/jquery.flot.pie.min.js",
+                "~/Scripts/ComLib/charts/flot/jquery.flot.grow.js",
                 //"~/Scripts/charts/flot/demo.js",
 
-                "~/Scripts/datatables/jquery.dataTables.min.js",
-                "~/Scripts/datatables/TableTools/dataTables.tableTools.min.js",
-                "~/Scripts/datatables/jquery.csv-0.71.min.js",
+                "~/Scripts/ComLib/datatables/jquery.dataTables.min.js",
+                "~/Scripts/ComLib/datatables/TableTools/dataTables.tableTools.min.js",
+                "~/Scripts/ComLib/datatables/jquery.csv-0.71.min.js",
 
-                "~/Scripts/app.js",
-                "~/Scripts/app.plugin.js"
+                "~/Scripts/ComLib/app.js",
+                "~/Scripts/ComLib/app.plugin.js"
             ));
 
             /* 
@@ -81,9 +81,9 @@ namespace ConsumerPortal
                     );
             }
             bundles.Add(new ScriptBundle("~/bundles/ember").Include(
-                "~/scripts/handlebars.js",
-                "~/scripts/ember.js",
-                "~/scripts/ember-data.js",
+                "~/scripts/ComLib/handlebars.js",
+                "~/scripts/ComLib/ember.js",
+                "~/scripts/ComLib/ember-data.js",
                 "~/app/webapi_serializer.js",
                 "~/app/webapi_adapter.js"
             ));
@@ -105,7 +105,7 @@ namespace ConsumerPortal
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                "~/Scripts/modernizr-*"
+                "~/Scripts/ComLib/modernizr-*"
             ));
 
             bundles.Add(new Bundle("~/Content/styles", new CssMinify()).Include(
