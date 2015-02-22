@@ -1,8 +1,5 @@
 ﻿App.Router.map(function () {
     this.route("index", { path: "/" });
-    //this.route("about");
-    //this.route("todoLists", { path: "/todo" });
-    //this.resource("todoList", { path: "/todoList/:todoList_id" });
 
     this.resource("bookings", { path: "/bookings" }, function() {
         this.resource("booking", { path: "/:booking_id" }, function () {
