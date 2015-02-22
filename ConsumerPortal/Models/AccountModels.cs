@@ -11,7 +11,7 @@ namespace ConsumerPortal.Models
     public class UsersContext : DbContext
     {
         public UsersContext()
-            : base("DefaultConnection")
+            : base("AppointmentConnection")
         {
         }
 
