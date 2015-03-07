@@ -6,6 +6,8 @@ using System.Threading;
 using System.Web.Mvc;
 using WebMatrix.WebData;
 using ConsumerPortal.Models;
+using EmberPersistenceLayer;
+using EmberInfrastructure.Log;
 
 namespace ConsumerPortal.Filters
 {
@@ -26,11 +28,16 @@ namespace ConsumerPortal.Filters
         {
             public SimpleMembershipInitializer()
             {
-                Database.SetInitializer<ConsumersContext>(null);
+                //Database.SetInitializer<ConsumersContext>(null);
+                Database.SetInitializer<AppointmentDBContext>(null);
+                Log4NetLogger logger = new Log4NetLogger();
+                logger.Info("aaaaaaaa");
+                logger.Debug("bbbbbbbbbb");
+                logger.Error("ssssssssssss");
 
                 try
                 {
-                    using (var context = new ConsumersContext())
+                    using (var context = new AppointmentDBContext())
                     {
                         if (!context.Database.Exists())
                         {
@@ -40,7 +47,7 @@ namespace ConsumerPortal.Filters
                     }
 
 
-                    WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "Id", "Name", autoCreateTables: true);
+                    WebSecurity.InitializeDatabaseConnection("AppointmentConnection", "UserProfile", "Id", "Name", autoCreateTables: true);
                     if (!WebSecurity.UserExists("admin"))
                     {
                         WebSecurity.CreateUserAndAccount("admin", "admin", new {Email = "admin@gmail.com"});

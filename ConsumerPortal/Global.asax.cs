@@ -11,6 +11,9 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using ConsumerPortal.Models;
 
+
+
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "~/App_Data/App_ConfigFiles/Log4Net.config", Watch = true)]
 namespace ConsumerPortal
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 

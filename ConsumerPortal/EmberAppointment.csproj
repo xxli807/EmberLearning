@@ -70,6 +70,9 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net-1.2.13\bin\net\4.0\release\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -225,18 +228,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201501070350061_InitialCreate.cs" />
-    <Compile Include="Migrations\201501070350061_InitialCreate.Designer.cs">
-      <DependentUpon>201501070350061_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BookingModels.cs" />
-    <Compile Include="Models\TodoItemDto.cs" />
-    <Compile Include="Models\TodoListDto.cs" />
-    <Compile Include="Models\TodoList.cs" />
-    <Compile Include="Models\TodoItem.cs" />
-    <Compile Include="Models\TodoItemContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -536,6 +530,9 @@
     <Content Include="App\templates\booking-view.hbs" />
     <Content Include="App\templates\bookings-list.hbs" />
     <Content Include="App\templates\booking-edit.hbs" />
+    <Content Include="App_Data\App_ConfigFiles\Log4Net.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\publish.pubxml" />
     <None Include="Scripts\ComLib\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\ComLib\jquery-2.1.1.js" />
@@ -636,7 +633,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\Logs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -648,9 +645,14 @@
     <Content Include="App_Readme\Handlebarsjs_LICENSE" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201501070350061_InitialCreate.resx">
-      <DependentUpon>201501070350061_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\EmberInfrastructure\EmberInfrastructure.csproj">
+      <Project>{456f28fa-a309-4f6e-b12d-534b6ab7c39f}</Project>
+      <Name>EmberInfrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmberPersistenceLayer\EmberPersistenceLayer.csproj">
+      <Project>{f5357cdf-606e-4a6a-9e45-35286748f3a9}</Project>
+      <Name>EmberPersistenceLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

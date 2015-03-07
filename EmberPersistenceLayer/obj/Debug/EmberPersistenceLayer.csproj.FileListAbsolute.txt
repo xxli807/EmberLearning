@@ -1,0 +1,9 @@
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\bin\Debug\EmberPersistenceLayer.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\bin\Debug\EmberPersistenceLayer.pdb
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\bin\Debug\EntityFramework.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\bin\Debug\EntityFramework.xml
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\obj\Debug\EmberPersistenceLayer.csprojResolveAssemblyReference.cache
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\obj\Debug\EmberPersistenceLayer.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberPersistenceLayer\obj\Debug\EmberPersistenceLayer.pdb

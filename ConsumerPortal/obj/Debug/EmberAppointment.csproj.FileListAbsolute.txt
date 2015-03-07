@@ -95,7 +95,11 @@ C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\zh
 C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\obj\Debug\EmberAppointment.csproj.App.config
 C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\obj\Debug\EmberAppointment.csprojResolveAssemblyReference.cache
-C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\obj\Debug\ConsumerPortal.Migrations.InitialCreate.resources
-C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\obj\Debug\EmberAppointment.csproj.GenerateResource.Cache
 C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\obj\Debug\ConsumerPortal.dll
 C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\obj\Debug\ConsumerPortal.pdb
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\EmberPersistenceLayer.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\EmberPersistenceLayer.pdb
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\EmberInfrastructure.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\log4net.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\EmberInfrastructure.pdb
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\ConsumerPortal\bin\log4net.xml

@@ -1,0 +1,7 @@
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberInfrastructure\obj\Debug\EmberInfrastructure.csprojResolveAssemblyReference.cache
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberInfrastructure\bin\Debug\EmberInfrastructure.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberInfrastructure\bin\Debug\EmberInfrastructure.pdb
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberInfrastructure\bin\Debug\log4net.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberInfrastructure\bin\Debug\log4net.xml
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberInfrastructure\obj\Debug\EmberInfrastructure.dll
+C:\Users\xin\Documents\GitHub\ConsumerPortal\EmberLearning\EmberInfrastructure\obj\Debug\EmberInfrastructure.pdb
