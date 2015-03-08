@@ -39,7 +39,4 @@ App.UserSerializer = DS.WebAPISerializer.extend({
 });
 
 
-App.User.FIXTURES = [
-  { id: 1, userId: 1, familyName: 'Trek', givenName: 'Glowacki', email: 'abc@abc.com', isDeactived: false },
-  { id: 2, userId: 2, familyName: 'Tom', givenName: 'Dale', email: 'abc@abc.com', isDeactived: false }
-];
+ 
